@@ -115,6 +115,7 @@ static void CallInjector(JNIEnv* jni_env, jclass injector_class,
 }
 
 void RunInjector() {
+  std::this_thread::sleep_for(std::chrono::seconds(20));
   ShowMessage(L"Starting");
 
   const auto jvm = GetJVM();
